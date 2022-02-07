@@ -30,8 +30,8 @@ pipeline{
          post {
         always{
             mail to: 'shivam.pateriya@knoldus.com',
-			subject: "Pipeline: ${currentBuild.fullDisplayName} is ${currentBuild.currentResult}",
-			body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}"
+			subject: "Pipeline info",
+			body: "you are build is ${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}"
         }
          success {
             echo "Testing is successful"
