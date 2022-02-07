@@ -28,10 +28,7 @@ pipeline{
             {
                 steps{
                     sh "mvn package"
-                    sshagent(['shivam_pateriya']) 
-                    {
-                       sh "scp -o StrictHostKeyChecking=no  Sciprt_Prod/target/hello-0.0.1-SNAPSHOT.jar shivam_pateriya@34.136.197.52:/home/shivam_pateriya"
-                    }
+            
                 }
             }
 
