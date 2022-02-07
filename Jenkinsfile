@@ -35,7 +35,7 @@ pipeline{
             {
                 steps{
                     sshagent(['shivam_pateriya']) {
-                    sh "scp -o StrictHostKeyChecking=no   /home/shivam_pateriya/checl/1.txt shivam_pateriya@34.136.197.52:/home/shivam_pateriya"            
+                    sh "scp -o StrictHostKeyChecking=no   /home/shivam_pateriya/checl/1.txt shivam_pateriya@34.136.197.52:/home/shivam_pateriya/"            
                  }
                 }
             }
