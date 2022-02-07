@@ -24,10 +24,11 @@ pipeline{
                     sh "mvn test"
                 }
             } 
-            stage("package")
+            stage("Package and Deplpy")
             {
                 steps{
                     sh "mvn package"
+                    sh java -Dserver.port=8081 -jar target/*.jar 
                 }
             }
 
