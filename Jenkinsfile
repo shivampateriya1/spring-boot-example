@@ -24,11 +24,19 @@ pipeline{
                     sh "mvn test"
                 }
             } 
-            stage("Package and Deplpy")
+            stage("Package and Deploy")
             {
                 steps{
                     sh "mvn package"
             
+                }
+            }
+            stage("Deploy")
+            {
+                steps{
+                    sshagent(['shivam_pateriya']) {
+                    sh "scp /home/shivam_pateriya/checl/1.txt shivam_pateriya@34.136.197.52:/home/shivam_pateriya"            
+                 }
                 }
             }
 
