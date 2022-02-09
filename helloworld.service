@@ -1,0 +1,19 @@
+[Unit]
+Description=Hello-world
+[Service]
+User=ubuntu
+
+
+
+WorkingDirectory=/home/shivam_pateriya
+
+
+ExecStart=/bin/bash /home/shivam_pateriya/helloworld.sh
+
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
