@@ -7,7 +7,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ dev ]
+    branches: [ Dev ]
 
 jobs:
   build:
@@ -26,5 +26,5 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: test
       run: mvn test
-      if: steps.extract_branch.outputs.branch == 'dev"
+      if: steps.extract_branch.outputs.branch == 'Dev'
       
