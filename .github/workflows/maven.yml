@@ -24,6 +24,6 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-      if: github.repository == 'spring-boot-example/dev'
     - name: test
-      run: mvn test
+#       if: github.repository == 'spring-boot-example/dev'
+      run: echo $github.repository
