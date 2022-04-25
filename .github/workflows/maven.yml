@@ -25,5 +25,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: test
-#       if: github.repository == 'spring-boot-example/dev'
-      run: echo $github.repository
+      run: mvn test
+      if: steps.extract_branch.outputs.branch == 'dev"
+      
